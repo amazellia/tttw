@@ -1,0 +1,516 @@
+/* style.css
+* Author: Amanda Patricia D. Viray
+* Date: 3/14/2020 to 4/12/2020
+* Purpose: To design the index.html
+*/
+
+/*Background Picture*/
+.background{
+    background-attachment: fixed;
+    background-image: url('media/background.jpg');
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*html design*/
+html {
+    /*Font family, font size, and font color of the website*/
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+/* </teach> Logo*/
+.logo {
+   display:block;
+   height: 30%;
+   margin-left: auto;
+   margin-right: auto;
+   width: 30%;
+}
+
+/*Navigation Bar*/
+/*--Style of the Header tag--*/
+header{
+    background-color: black;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 78rem;
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 5rem;
+    text-align: center;
+    display: flex;
+}
+
+#nav {
+    list-style-type: none;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    position: relative;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 3rem 2rem;
+}
+
+#nav a:link {
+    color: coral;
+}
+
+#nav a:visited{
+    color: #40E0D0;
+}
+
+#nav a:hover {
+    font-size: 130%;
+    color: coral;
+    background-color:white;
+}
+
+#nav a:active {
+    color: orange;
+    background-color: white;
+}
+
+.active {
+    background-color: white;
+    color: black;
+}
+
+.paddingUL {
+    padding: 0 0 0 0;
+}
+
+/*Home page picture*/
+/*--Coral-themed workspace photo--*/
+#imagebox {
+    position: relative;
+}
+
+.coralWorkspace {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: -1rem;
+}
+
+.centerBox {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+mark {
+    background-color: white;
+    color: coral;
+}
+
+/*Three Column Info from W3Schools*/
+/*https://www.w3schools.com/howto/howto_css_three_columns.asp*/
+.column {
+    float: left;
+    width: 31.948%;
+    padding: 10px;
+    height: 250px;
+    background-color: rgba(248,131,121,0.3);
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.row p {
+    font-size: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.intro-item {
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+}
+
+
+/*Headings*/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.fullHeading {
+    font-family: 'Space Mono', monospace;
+    font-size: 64px;
+    text-align: center;
+}
+
+/*Blockquote*/
+blockquote {
+    font-size: x-large;
+    font-weight: 700;
+}
+
+/*Content*/
+/*--a class for unordered list of STEM Strands in //contents --*/
+.contents {
+    font-size: 20px;
+}
+
+.contents a {
+    text-decoration: none;
+}
+
+.contents a:link {
+    color: #9B4A97FF;
+}
+
+.contents a:visited {
+    color: rgb(43, 167, 154);
+}
+
+.contents a:hover {
+    color: coral;
+}
+
+.contents a:active {
+    color: orange;
+}
+
+/*--a div class for each area--*/
+.area {
+    border-radius: 25px;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.area a {
+    text-decoration: none;
+}
+
+.area a:link {
+    color: coral;
+}
+
+.area a:visited {
+    color: rgb(43, 167, 154);
+}
+
+.area a:hover {
+    color: orange;
+}
+
+.area a:active {
+    color: #9B4A97FF;
+}
+
+/*Paragraph*/
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+/*Video*/
+.videoContainer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.video {
+    height: 400px;
+    width: 50%;
+}
+
+/*Footer*/
+
+/*--Amanda's Copyright Statement--*/
+#rightFooter {
+    list-style-type: none;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+address a{
+    color: #9B4A97FF;
+}
+
+address a:link {
+    color: #9B4A97FF;
+}
+
+address a:visited {
+    color: rgb(43, 167, 154);
+}
+
+address a:hover {
+    color: coral;
+    background-color: white;
+}
+
+address a:active {
+    color: #9B4A97FF;
+    background-color: white;
+}
+
+/*--Social Networking Sites logos--*/
+.sns {
+    width: 3%;
+    height: 3%;
+    padding: 5px;
+    float: left;
+}
+
+/*--University of Newcastle Logo--*/
+.uon {
+    width: 10%;
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+/*a class for the navigation at the bottom of the page*/
+/*--consists of UoN, SNS, Contact Us, About Us, Terms and Conditions and Privacy Policy--*/
+.navBottom {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li.navBottom {
+    display:inline; 
+}
+
+li.navBottom a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.navBottom a:link {
+    color: #9B4A97FF;
+}
+
+li.navBottom a:visited {
+    color:rgb(43, 167, 154);
+}
+
+li.navBottom a:hover {
+    color: coral;
+    font-size: larger;
+}
+
+li.navBottom a:active {
+    color: orange;
+}
+
+/*CSS for contact.html*/
+.wrapper{
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow:4px 4px 2px rgb(228, 174, 188, 0.5);
+}
+
+.wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.wrapper .input_field {
+    margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea {
+    width: 95%;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+.wrapper textarea{
+    height:80px;
+    resize: none;
+}
+
+.wrapper .btn input[type="submit"] {
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: coral;
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.wrapper #error_message {
+    margin-bottom: 20px;
+    padding: 0px;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+/*CSS for form.html*/
+.form {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow:4px 4px 2px rgb(228, 174, 188, 0.5);
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.form .enroll_input {
+    margin-bottom: 10px;
+}
+
+.form .enroll_input input[type="text"],
+.form .enroll_input input[type="number"],
+.form .enroll_input input[type="tel"],
+.form .enroll_input input[type="date"],
+.form .enroll_input select,
+
+.form textarea {
+    width: 95%;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+.form textarea{
+    height:80px;
+    resize: none;
+}
+
+.form #error_message {
+    margin-bottom: 20px;
+    padding: 0px;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.form #error_email {
+    margin-bottom: 20px;
+    padding: 0px;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.form #error_phone {
+    margin-bottom: 20px;
+    padding: 0px;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.form #error_address {
+    margin-bottom: 20px;
+    padding: 0px;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.form .btnForm input[type="submit"],
+.form .btnForm input[type="reset"] {
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: coral;
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/*aboutUs.html design*/
+.aboutUsContent {
+    margin: 1cm;
+    padding: 2cm;
+    background-color: rgba(248,131,121,0.4);
+}
+
+.uon_picture {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+}
+
+.amanda_picture {
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    width: 10%;
+    border: 5px solid rgb(247, 197, 62);
+    margin: 5px 20px;
+}
+/*=======END=======*/

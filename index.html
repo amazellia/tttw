@@ -1,0 +1,313 @@
+<!-- 
+==========================================================================
+index.html
+Author: Amanda Patricia D. Viray
+
+Version 1.0 
+Date started:   3/14/2020
+Date completed: 4/12/2020
+This version is linked to contact.html, aboutUs.html, style.css and four 
+XMLs, engineering.xml, mathematics.xml, technology.xml, and template.xml.
+
+Version 2.0
+Date started:   4/25/2020
+Date completed: 5/17/2020
+Version 2.0 updates the "Teach-To-The-World" by adding more links to the
+Homepage navigation, form.html, and InformationDisplay.xslt.
+
+Purpose: to develop and showcase the "Teach-To-The-World" Homepage for 
+advertisements of online courses
+==========================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>&#60;/TEACH&#62; TO THE WORLD</title>
+	<!-- Fonts used for Teach-to-the-World -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+	
+	<!--External CSS-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Document-level Stylesheet-->
+	<style>
+		body {
+			/*All-side margin of 1cm*/
+			margin: 1cm;
+			padding: 0;
+			box-sizing: border-box;
+			
+			/*Color of the margin*/
+			background-color: rgba(248,131,121,0.4);
+		}
+	</style>
+	
+	<!--Document-level JavaScipt-->
+	<script>
+	</script>
+</head>
+
+<body>
+
+<!-- === Background Image === -->
+<div class="background">
+
+<!-- === Navigation Bar === -->
+<header>
+<div class="container">
+<!--Logo-->
+<a href="index.html"><img src="media/logo.png" alt="Teach Logo" class="logo"></a>
+<nav>
+	<ul id="nav" class="paddingUL">
+		<li class="nav" ><a href="index.html" class="active">Home</a></li>
+		<li class="nav"><a href="technology.xml">Technology</a></li>
+		<li class="nav"><a href="engineering.xml">Engineering</a></li>
+		<li class="nav"><a href="mathematics.xml">Mathematics</a></li>
+		<li class="nav"><a href="form.html">Enrollment</a></li>
+		<li class="nav"><a href="contact.html">Contact</a></li>
+		<li class="nav"><a href="aboutUs.html">About Us</a></li>
+	</ul>
+	
+</nav>
+</div>
+</header>
+
+<!-- === Introduction === -->
+<div id="imageBox">
+	<img src="media/intro.jpg" class="coralWorkspace" alt="Colored Coral-themed workspace">
+	<div class="fullHeading"><mark class="centerBox">teach-to-the-world</mark></div>
+</div>
+
+<div class="row">
+	<div class="column">
+		<span class="intro-item">//indroduction</span>
+		<p>
+			Created by <strong>University of Newcastle, Australia</strong>, <em><b>&#60;/teach&#62;</b></em> offers a range of valuable STEM courses, from Technology
+			to Mathematics. It focuses on deliverying the best online learning experience to everyone. 
+		</p>
+	</div>
+	<div class="column">
+		<span class="intro-item">//purpose</span>
+		<p>
+			It aims to delivery online quality courses to aspriring students with our experienced, certified lecturers of their specialized fields.
+			We stand on our motto to</p><blockquote>teach to the world!</blockquote>
+	</div>
+	<div class="column">
+		<span class="intro-item">//contents</span>
+		<p>
+			It currently offers three major strands of STEM, the following are:
+		</p>
+		<ul class="contents">
+			<li><a href="#Technology">Technology</a></li>
+			<li><a href="#Engineering">Engineering</a></li>
+			<li><a href="#Mathematics">Mathematics</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- === Content of S[TEM] Areas === -->
+<div class="fullHeading"><mark>
+	S[TEM] areas </mark></div>
+
+<!--Technology Strand-->
+<!--Courses: INFT3950, INFT3960, INFT1201-->
+<div class="area">
+	<h1 id="Technology"><a href="technology.xml">Technology</a></h1>
+	<p>
+	The Technology area offers courses such as Games Design, Games Production, and Digital Technologies. Our programs are designed to ingrain deep 
+	technical discipline knowledge within a robust, professional perspective framework. Our graduates hone their technical skills by working on 
+	real-world problems both individually and 	in teams to achieve ethical, socially responsible and technically meritorious solutions to complex,
+	open-ended problems (Source: <a href="https://www.newcastle.edu.au/">University of Newcastle</a>).
+	</p>
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/INFT3950">INFT3950</a>
+		Games Design
+	</h2>
+	<p>
+	Introduces the techniques of designing games for the digital entertainment industry. Students will analyse key game design elements 
+	including game genres, concepts, virtual worlds, storytelling, character, user interface design, and core technologies with a focus 
+	on the conceptual component of games design. Students will assimilate and expand upon the key theories and practices associated with
+	games design via a series of written and practical projects.
+	</p>
+	<div class="videoContainer">
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/G8AT01tuyrk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/6vSucvjN9Tc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/INFT3960">INFT3960</a>
+		Games Production
+	</h2>
+	<p>
+		Building on prior programming knowledge, students will use available game engine technology to construct the operating elements 
+		of a game design. This course examines the techniques used in bringing a game to the point of distribution and transforming a design 
+		into a reality. Students will also come to experience and understand the relevance of other implementation issues such as physics 
+		engines, rendering tools, audio components, and the integration of the output from the art production tools used to create the game 
+		objects, world elements and backgrounds.
+	</p>
+	<div class="videoContainer">
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/SicZcaa-pRk" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/WUkcz2taCiw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/INFT1201">INFT1201</a>
+		 Digital Technologies for Media and Entertainment
+	</h2>
+	<p>
+		Building on prior programming knowledge, students will use available game engine technology to construct the operating elements 
+		of a game design. This course examines the techniques used in bringing a game to the point of distribution and transforming a design 
+		into a reality. Students will also come to experience and understand the relevance of other implementation issues such as physics 
+		engines, rendering tools, audio components, and the integration of the output from the art production tools used to create the game 
+		objects, world elements and backgrounds.
+	</p>
+	<div class="videoContainer">
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/XnkFYKTDCvU?start=6" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/CrL8lqJkvAE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!--Engineering Strand-->
+<!--Courses: SENG2260, ENGG1003, SENG4430-->
+<div class="area">
+<h1 id="Engineering"><a href="engineering.xml">Engineering</a></h1>
+<p>
+	The Engineering area is dedicated to teaching courses such as Human-Computer Interaction, Introduction to Procedural Programming, and Software
+	Quality. Our programs are designed to ingrain deep technical discipline knowledge within a robust, professional perspective framework. Our 
+	graduates hone their technical skills by working on real-world problems both individually and in teams to achieve ethical, socially responsible
+	 and technically meritorious solutions to complex, open-ended problems (Source: <a href="https://www.newcastle.edu.au/">University of Newcastle</a>).
+</p>
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/SENG2260">SENG2260</a>
+		Human-Computer Interaction
+	</h2>
+	<p>
+	Introduces the techniques of designing games for the digital entertainment industry. Students will analyse key game design elements 
+	including game genres, concepts, virtual worlds, storytelling, character, user interface design, and core technologies with a focus 
+	on the conceptual component of games design. Students will assimilate and expand upon the key theories and practices associated with
+	games design via a series of written and practical projects.
+	</p>
+	<div class="videoContainer">
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/t_ZzhadA3DY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/m1zk4r6NWBc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/ENGG1003">ENGG1003</a>
+		Introduction to Procedural Programming
+	</h2>
+	<p>
+	This course introduces students to procedural programming and problem-solving with computers through MATLAB® and C, and assumes 
+	that students have basic computer literacy but no prior exposure to computer programming.
+	</p>
+	<div class="videoContainer">
+		<iframe class="video" src="https://www.youtube-nocookie.com/embed/aoE-92Ac4zE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe class="video" src="https://www.youtube-nocookie.com/embed/eEBOvqMfPoI" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/SENG4430">SENG4430</a>
+		Software Quality
+	</h2>
+	<p>
+	This course examines principles and techniques for designing quality into software, and for measuring and monitoring quality in 
+	software. Students will also obtain practical experience with software quality management and use of quality management tools.
+	</p>
+	<div class="videoContainer">
+		<iframe class="video" src="https://www.youtube-nocookie.com/embed/tDgXaM-P8ck" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe class="video" src="https://www.youtube-nocookie.com/embed/T3q6QcCQZQg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!--Mathematics Strand-->
+<!--Courses: MATH1520, MATH1002, MATH2920-->
+<div class="area">
+	<h1 id="Mathematics"><a href="mathematics.xml">Mathematics</a></h1>
+	<p>
+	Responding to the demand for graduates with quantitative and analytical skills, the Mathematics area prepares students and researchers 
+	to be visionary thinkers, exploring tomorrow’s big challenges today. established an enviable reputation for our teaching and research 
+	standards largely due to our high-calibre staff (Source: <a href="https://www.newcastle.edu.au/">University of Newcastle</a>). Our courses
+	includes Discrete Mathematics, Foundational Studies in Mathematics, and Thinking and Working Mathematically.
+	</p>
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/MATH1520">MATH1520</a>
+		Discrete Mathematic
+	</h2>
+	<p>
+	Discrete mathematics is the study of mathematical structures that are discrete, separated or distinct; in contrast with calculus 
+	which deals with continuous change. It is an important area of pure and applied mathematics, as well as providing the mathematical 
+	basis for the understanding of computers and modern computation. Discrete Mathematics is important in the sciences, where it has 
+	increasing application in many areas, an exemplar of which is the understanding of DNA sequences in molecular biology. The Discrete 
+	Mathematics course introduces first year students to the basic concepts of discrete mathematics, covering topics such as sets, logic, 
+	enumeration methods, probability, recurrence relations, induction and graph theory. The course provides important background for 
+	students pursuing a BMath degree. It covers much of the mathematics essential for students majoring in Computer Science or Software 
+	Engineering, and is a compulsory course in those degree programs.
+	</p>
+	<div class="videoContainer">
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/L3LMbpZIKhQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/tyDKR4FG3Yw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/MATH1002">MATH1002</a>
+		Foundational Studies in Mathematics
+	</h2>
+	<p>
+	Many relationships in the real world can be modelled via a mathematical function of one or more variables. This course introduces 
+	common functions of one variable used in the sciences, equips students with the tools of differential and integral calculus to analyse 
+	the properties of such functions, and develops an understanding of the role of functions and calculus in real-world systems.
+	This course is suitable for students with a background in high-school mathematics who have not studied, or who have not succeeded 
+	in, 2 unit or higher mathematics courses at HSC level. 
+	</p>
+	<div class="videoContainer">
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/PXwStduNw14" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/OmJ-4B-mS-Y" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<h2>
+		<a href="https://www.newcastle.edu.au/course/MATH2920">MATH2920</a>
+		Thinking and Working Mathematically
+	</h2>
+	<p>
+	Provides students in Education programs with an insight into the nature of problem-solving in mathematics. In particular, within the 
+	scope of the mathematics they have studied, the students will become aware of the process of using mathematics in open-ended problems, 
+	the way in which new mathematics can be developed, and mathematics as a human endeavour. Encourages students to think mathematically 
+	and increase students' confidence in their mathematical ability.
+	</p>
+	<div class="videoContainer">
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/tN9Xl1AcSv8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe class="video" src="https://www.youtube-nocookie.com/embed/kZTKuMBJP7Y" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!-- === Footer === -->
+<!-- Author's Copyright Statement -->
+<address>
+<ul id="rightFooter">
+	<li>&#169; 2020 by <a href="https://amandaviray.wixsite.com/amazellia">Amanda Patricia D. Viray</a></li>
+	<li>AmandaPatricia.Viray@uon.edu.au</li>
+	<li>Bachelor of Information Technology - Interactive Media</li>
+</ul>
+</address>
+
+<!-- SNS and Links -->
+<ul class="navBottom">
+	<li class="navBottom"><a href="https://www.newcastle.edu.au/"><img src="media/uon.png" alt="Universty of Newcastle, Australia" class="uon"></a></li>
+	<li class="navBottom"><a href="https://www.linkedin.com/school/university-of-newcastle/"><img src="media/linkedin.png" alt="LinkedIn" class="sns"></a></li>
+	<li class="navBottom"><a href="https://www.instagram.com/uni_newcastle/?hl=en"><img src="media/instagram.png" alt="Instagram" class="sns"></a></li>
+	<li class="navBottom"><a href="https://twitter.com/Uni_Newcastle"><img src="media/twitter.png" alt="Twitter" class="sns"></a></li>
+
+	<li class="navBottom"><a href="aboutUs.html" style="float: right"><strong>About Us</strong></a></li>
+	<li class="navBottom"><a href="contact.html" style="float: right"><strong>Contact</strong></a></li>
+	<li class="navBottom"><a href="https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/" style="float: right"><strong>Privacy Policy</strong></a></li>
+	<li class="navBottom"><a href="https://media.termsfeed.com/pdf/terms-and-conditions-template.pdf" style="float: right"><strong>Terms and Conditions</strong></a></li>
+</ul>
+</div> <!--End of div class 'background' -->
+
+</body>
+</html>

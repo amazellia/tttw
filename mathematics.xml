@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="InformationDisplay.xsl"?>
+
+<!-- 
+mathematics.xml
+Author: Amanda Patricia D. Viray
+Date: 3/13/2020 - 4/12/2020
+-->
+
+<!DOCTYPE teachSTEM [
+<!ELEMENT teachSTEM (course+)>
+	<!ELEMENT course (program, srtdescription, objectives, picture, duration+, cost+, lngdescription+, video, curriculum, URL)>
+	<!ATTLIST teachSTEM area (Science|Technology|Engineering|Mathematics) #REQUIRED>
+	
+	<!ELEMENT program 
+		(name,coursecode, units, level)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT coursecode (#PCDATA)>
+	<!ELEMENT units (#PCDATA)>
+		<!ATTLIST units type (10|20) #REQUIRED>
+	<!ELEMENT level (#PCDATA)>
+		<!ATTLIST level lvl (1000|2000|3000|4000|5000|6000) #REQUIRED>
+	
+	<!ELEMENT srtdescription 
+		(#PCDATA)>
+		
+	<!ELEMENT objectives 
+		(learn+)>
+	<!ELEMENT learn (#PCDATA)>
+	
+	<!ELEMENT picture 
+		(#PCDATA)>
+		<!ATTLIST picture source CDATA "0">
+	
+	<!ELEMENT duration 
+		(weeks, perWeek)>
+	<!ELEMENT weeks (#PCDATA)>
+		<!ATTLIST weeks number CDATA "0">
+	<!ELEMENT perWeek 
+		(lecture, lab)>
+		<!ATTLIST perWeek hours CDATA "0">
+	<!ELEMENT lecture (#PCDATA)>
+		<!ATTLIST lecture hours CDATA "0">
+	<!ELEMENT lab (#PCDATA)>
+		<!ATTLIST lab hours CDATA "0">
+	
+	<!ELEMENT cost
+		(semester,  wScolarship*)>
+	<!ELEMENT semester 
+		(#PCDATA)>
+		<!ATTLIST semester cost CDATA "0">
+		<!ATTLIST semester currency (AUD|USD) #REQUIRED>
+	<!ELEMENT wScolarship (#PCDATA)>
+		<!ATTLIST wScolarship cost CDATA "0">
+		<!ATTLIST wScolarship currency (AUD|USD) #REQUIRED>
+	
+	<!ELEMENT lngdescription 
+		(#PCDATA)>
+		
+	<!ELEMENT video
+		(url+)>
+	<!ELEMENT url (#PCDATA)>
+		
+	<!ELEMENT curriculum 
+		(topic+)>
+	<!ELEMENT topic (#PCDATA)>
+	
+	<!ELEMENT URL 
+		(#PCDATA)>
+		<!ATTLIST URL source CDATA "0">
+
+	<!ENTITY FoS "Faculty of Science">
+	
+	<!ENTITY SMPS "School of Mathematical and Physical Sciences">
+]>
+
+<teachSTEM area="Mathematics">
+	<!--MATH1520 Discrete Mathematics-->
+	<course>
+		<program>
+			<name>Discrete Mathematics</name>
+			<coursecode>MATH1510</coursecode>
+			<units type="10"/>
+			<level lvl="1000"/>	
+		</program>
+
+		<srtdescription>
+		This course is under the &FoS; , &SMPS;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Read, interpret and write some basic mathematical notation</learn>
+			<learn>Recognise and/or construct examples of mathematical objects introduced during the course, such as sets and functions</learn>
+			<learn>Identify and use several mathematical models, (e.g. propositional logic, trees) including some of those underlying computing and information technology</learn>
+			<learn>Recognise valid, logical, mathematical arguments and construct valid arguments/proofs</learn>
+			<learn>Simplify complex mathematical scenarios using logical thinking and problem-solving skills.</learn>
+		</objectives>
+		
+		<picture source="media/MATH1510.png"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="6">
+				<lecture hours="4"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			Discrete mathematics is the study of mathematical structures that are discrete, separated or distinct; in contrast with calculus 
+			which deals with continuous change. It is an important area of pure and applied mathematics, as well as providing the mathematical 
+			basis for the understanding of computers and modern computation. Discrete Mathematics is important in the sciences, where it has 
+			increasing application in many areas, an exemplar of which is the understanding of DNA sequences in molecular biology. The Discrete 
+			Mathematics course introduces first year students to the basic concepts of discrete mathematics, covering topics such as sets, logic, 
+			enumeration methods, probability, recurrence relations, induction and graph theory. The course provides important background for 
+			students pursuing a BMath degree. It covers much of the mathematics essential for students majoring in Computer Science or Software 
+			Engineering, and is a compulsory course in those degree programs.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=L3LMbpZIKhQ</url>
+			<url>https://www.youtube.com/watch?v=tyDKR4FG3Yw</url>
+		</video>
+				
+		<curriculum>
+			<topic>Elementary Set Theory</topic>
+			<topic>Relations and Functions</topic>
+			<topic>Graph Theory</topic>
+			<topic>Modular Arithmetic</topic>
+			<topic>Logic and Proofs</topic>
+			<topic>Enumeration Techniques</topic>
+			<topic>Elementary Probability Theory</topic>
+			<topic>Recurrence Relations</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/MATH1510"/>
+
+	</course>
+
+	<!--MATH1002 Foundational Studies of Mathematics-->
+	<course>
+		<program>
+			<name>Foundational Studies in Mathematics</name>
+			<coursecode>MATH1002</coursecode>
+			<units type="10"/>
+			<level lvl="1000"/>	
+		</program>
+
+		<srtdescription>
+		This course is under the &FoS; , &SMPS;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Apply skills in algebra, differential calculus and integral calculus to solve mathematical problems</learn>
+			<learn>Use mathematical functions and their graphs to clearly specify relationships between variables</learn>
+			<learn>Recall and apply properties of common functions of a single real variable to solve mathematical problems</learn>
+		</objectives>
+		
+		<picture source="media/MATH1002.jpg"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="6">
+				<lecture hours="4"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			Many relationships in the real world can be modelled via a mathematical function of one or more variables. This course introduces 
+			common functions of one variable used in the sciences, equips students with the tools of differential and integral calculus to analyse 
+			the properties of such functions, and develops an understanding of the role of functions and calculus in real-world systems.
+			This course is suitable for students with a background in high-school mathematics who have not studied, or who have not succeeded 
+			in, 2 unit or higher mathematics courses at HSC level. 
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=OmJ-4B-mS-Y</url>
+			<url>https://www.youtube.com/watch?v=PXwStduNw14</url>
+		</video>
+				
+		<curriculum>
+			<topic>Essential Algebra including expanding, factoring, fractions and powers, polynomials and surds</topic>
+			<topic>Real Valued Functions including exponentials and trigonometric functions and their inverse functions; sketching graphs</topic>
+			<topic>Differentiation and integration of simple functions; geometric interpretation and applications</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/MATH1002"/>
+
+	</course>
+
+	<!--MATH2920 Thinking and Working Mathematically-->
+	<course>
+		<program>
+			<name>Thinking and Working Mathematically</name>
+			<coursecode>MATH2920</coursecode>
+			<units type="10"/>
+			<level lvl="2000"/>	
+		</program>
+
+		<srtdescription>
+		This course is under the &FoS; , &SMPS;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Undertake an investigation into a problem arising from a pure mathematics setting</learn>
+			<learn>Undertake a mathematical investigation into a problem arising from a setting outside of mathematics</learn>
+			<learn>Reflect on the relationship between thinking and working mathematically and mathematics education</learn>
+		</objectives>
+		
+		<picture source="media/MATH2920.jpg"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="4">
+				<lecture hours="2"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			Provides students in Education programs with an insight into the nature of problem-solving in mathematics. In particular, within the 
+			scope of the mathematics they have studied, the students will become aware of the process of using mathematics in open-ended problems, 
+			the way in which new mathematics can be developed, and mathematics as a human endeavour. Encourages students to think mathematically 
+			and increase students' confidence in their mathematical ability.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=tN9Xl1AcSv8</url>
+			<url>https://www.youtube.com/watch?v=kZTKuMBJP7Y</url>
+		</video>
+				
+		<curriculum>
+			<topic>Working mathematically - approaches to problem-solving</topic>
+			<topic>Thinking mathematically - problem-posing, generalising, conjecturing, linking.</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/MATH2920"/>
+
+	</course>
+</teachSTEM>

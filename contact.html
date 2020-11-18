@@ -1,0 +1,168 @@
+<!-- 
+==========================================================================
+contact.html
+Author: Amanda Patricia D. Viray
+Date: 3/14/2020 to 5/16/2020
+Purpose: to let users contact Teach-To-The-World
+==========================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Us</title>
+	<!-- Fonts used for Teach-to-the-World -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+	
+	<!--External CSS-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--In-document Stylesheet-->
+	<style>
+		/*All-side margin of 1cm*/
+		body {
+			margin: 1cm;
+			padding: 0;
+			box-sizing: border-box;
+			/*Color of the margin*/
+			background-color: rgba(248,131,121,0.4);
+		}
+		/*html design*/
+		html {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 14px;
+		}
+		
+		/*Background Picture*/
+		.background{
+			background-image: url('media/background.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;	
+		}
+	</style>
+
+	<script>
+	//Another form validation to for Contact Us
+		function validate(){
+  			var name = document.getElementById("name").value;
+  			var subject = document.getElementById("subject").value;
+  			var phone = document.getElementById("phone").value;
+  			var email = document.getElementById("email").value;
+  			var message = document.getElementById("message").value;
+  			var error_message = document.getElementById("error_message");
+  
+  			error_message.style.padding = "10px";
+			  var text;
+			  
+  		if(name == ""){
+    		text = "Please Enter valid Name";
+    		error_message.innerHTML = text;
+    		return false;
+  		}
+  		if(subject.length < 10){
+    		text = "Please Enter Correct Subject";
+    		error_message.innerHTML = text;
+    		return false;
+  		}
+  		if(isNaN(phone) || phone.length != 10){
+    		text = "Please Enter valid 10-digit Phone Number";
+    		error_message.innerHTML = text;
+    		return false;
+  		}
+  		if(email.indexOf("@") == -1 || email.length < 6){
+    		text = "Please Enter valid Email";
+    		error_message.innerHTML = text;
+    		return false;
+  		}
+  		if(message.length <= 140){
+    		text = "Please Enter More Than 140 Characters";
+    		error_message.innerHTML = text;
+    		return false;
+  		}
+  		alert("Form Submitted Successfully!");
+  		return true;
+		}
+	</script>
+</head>
+
+<body>
+
+<!-- === Background Image === -->
+<div class="background">
+
+<!-- === Navigation Bar === -->
+<header>
+<div class="container">
+<!--Logo-->
+<a href="index.html"><img src="media/logo.png" alt="Teach Logo" class="logo"></a>
+<nav>
+	<ul id="nav" class="paddingUL">
+		<li class="nav" ><a href="index.html">Home</a></li>
+		<li class="nav"><a href="technology.xml">Technology</a></li>
+		<li class="nav"><a href="engineering.xml">Engineering</a></li>
+		<li class="nav"><a href="mathematics.xml">Mathematics</a></li>
+		<li class="nav"><a href="form.html">Enrollment</a></li>
+		<li class="nav"><a href="contact.html" class="active">Contact</a></li>
+		<li class="nav"><a href="aboutUs.html">About Us</a></li>
+	</ul>		
+</nav>
+</div>
+</header>
+
+<div class="wrapper">
+	<h2>Contact Us</h2>
+	<div id="error_message"></div>
+	<!--Contact Us Form-->
+	<form name="myform"  method="POST" action="http://evc-cit.info/cgi-bin/echoform.cgi" onsubmit="return validate();">
+		<div class="input_field">
+			<input type="text" placeholder="Name" id="name">
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Subject" id="subject">
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Phone" id="phone">
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Email" id="email">
+		</div>
+		<div class="input_field">
+			<textarea id="message" placeholder="Message"></textarea>
+		</div>
+		<div class="btn">
+			<input type="submit">
+		</div>
+	</form>
+</div>
+
+<!-- === Footer === -->
+<!-- Author's Copyright Statement -->
+<address>
+<ul id="rightFooter">
+	<li>&#169; 2020 by <a href="https://amandaviray.wixsite.com/amazellia">Amanda Patricia D. Viray</a></li>
+	<li>AmandaPatricia.Viray@uon.edu.au</li>
+	<li>Bachelor of Information Technology - Interactive Media</li>
+</ul>
+</address>
+	
+<!-- SNS and Links -->
+<ul class="navBottom">
+	<li class="navBottom"><a href="https://www.newcastle.edu.au/"><img src="media/uon.png" alt="Universty of Newcastle, Australia" class="uon"></a></li>
+	<li class="navBottom"><a href="https://www.linkedin.com/school/university-of-newcastle/"><img src="media/linkedin.png" alt="LinkedIn" class="sns"></a></li>
+	<li class="navBottom"><a href="https://www.instagram.com/uni_newcastle/?hl=en"><img src="media/instagram.png" alt="Instagram" class="sns"></a></li>
+	<li class="navBottom"><a href="https://twitter.com/Uni_Newcastle"><img src="media/twitter.png" alt="Twitter" class="sns"></a></li>
+
+	<li class="navBottom"><a href="aboutUs.html" style="float: right"><strong>About Us</strong></a></li>
+	<li class="navBottom"><a href="contact.html" style="float: right"><strong>Contact</strong></a></li>
+	<li class="navBottom"><a href="https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/" style="float: right"><strong>Privacy Policy</strong></a></li>
+	<li class="navBottom"><a href="https://media.termsfeed.com/pdf/terms-and-conditions-template.pdf" style="float: right"><strong>Terms and Conditions</strong></a></li>
+</ul>
+</div> <!--End of div class 'background' -->
+	
+</body>
+
+</html>

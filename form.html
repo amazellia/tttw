@@ -1,0 +1,495 @@
+<!-- 
+==========================================================================
+form.html
+Author: Amanda Patricia D. Viray
+
+Version 1.0 
+Date started:   4/25/2020
+Date completed: 5/16/2020
+This is a data collection page that validates the date provided by the 
+user who wants to enroll to </teach> online courses. 
+
+Purpose: Validate the form input before submitting it to the 
+data collection page. 
+==========================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>&#60;/TEACH&#62; TO THE WORLD</title>
+	<!-- Fonts used for Teach-to-the-World -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+	
+	<!--External CSS-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Document-level Stylesheet-->
+	<style>
+		body {
+			/*All-side margin of 1cm*/
+			margin: 1cm;
+			padding: 0;
+			box-sizing: border-box;
+			
+			/*Color of the margin*/
+			background-color: rgba(248,131,121,0.4);
+        }
+        
+        #enrollTitle {
+            text-align: center;
+        }
+
+	</style>
+	
+	<!--Document-level JavaScipt-->
+    <script>
+
+        function validateForm() {
+            // this is the main function for validating the Enrollment form 
+            // validates 14 fields: salutation, first name, last name, gender, age range, STEM strand, text area, 
+            // street address, city, country, country of birth, country of residence, e-mail and phone number.
+            if ((checkNamesGenderAgeSTEM() && checkAddressBirthResident() && checkEmailPhone())==true){
+            alert("You have sucessfully completed the form! Horaay!");
+            return true;
+            } else {
+                return false;
+            }
+        }
+
+        function checkNamesGenderAgeSTEM() {
+            // This function checks the validity of the salutation, names, gender, age range, STEM strand, and text area.
+            var Fname = document.enrollment.firstName.value;
+            var Lname = document.enrollment.lastName.value;
+            var gender = document.enrollment.gender.selectedIndex;
+            var STEMstrand = document.enrollment.STEMstrand.checked;
+            var course = document.enrollment.course.value;
+
+            var text;
+            error_message.style.padding = "14px";
+
+            // To check the salutation
+            if (document.enrollment.salutation.selectedIndex == 0) {
+                alert("Please input your salutation!");
+                text = "Please pick your prefered salutation!";
+                error_message.innerHTML = text;
+                return false;
+            } // ===salutation===
+            
+            // To check the name
+            if (Fname == "") {
+                alert("Please check your first name!");
+                text = "Oof! Please provide your first name!";
+                error_message.innerHTML = text;
+                return false;
+            } else if (Lname == "") {
+                alert("Please input your last name!");
+                text = "Oh my! Please provide your last name, "+ Fname + "!";
+                error_message.innerHTML = text;
+                return false;
+            } // === first name & last name ===
+
+            //To check gender
+            if (document.enrollment.gender.selectedIndex == 0) {
+                alert("Choose your gender, " + Fname + ".");
+                text = "Please pick your gender, " + Fname + " " + Lname + ".";
+                error_message.innerHTML = text;
+                return false;
+            } // === gender ===
+            
+            // To check the age range
+            if (!document.enrollment.ageRange[0].checked &&
+                !document.enrollment.ageRange[1].checked &&
+                !document.enrollment.ageRange[2].checked &&
+                !document.enrollment.ageRange[3].checked &&
+                !document.enrollment.ageRange[4].checked &&
+                !document.enrollment.ageRange[0].checked) {
+                alert("Choose your age range, " + Fname + ".");
+                text = "Please select your age range!";
+                error_message.innerHTML = text;
+                return false;
+            }// === age range ===
+
+            //To check STEM strand
+            if (!document.enrollment.STEMstrand[0].checked &&
+                !document.enrollment.STEMstrand[1].checked &&
+                !document.enrollment.STEMstrand[2].checked) {
+                alert("Choose your desired STEM strand, " + Lname + ".");
+                text = "Please pick a STEM strand.";
+                error_message.innerHTML = text;
+                return false;
+            } // === S[TEM] strand ===
+
+            // text area: reason for choosing their course
+            if (course.length <= 100) {
+                alert(Fname + ", please write more than 100 characters for your reasons on picking your course!");
+                text = "Please write more than 100 characters in reasons for picking your course!";
+                error_message.innerHTML = text;
+                return false;
+            } // === text area ===
+
+            // If everything is validated and true,
+            else {
+                text = "";
+                error_message.innerHTML = text;
+                error_message.style.padding = "0px";
+                return true;
+            } // === return true validation ===
+        } // checkNamesGenderAgeSTEM()
+
+        function checkEmailPhone() {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+            var Fname = document.enrollment.firstName.value;
+            var text;
+            error_phone.style.padding = "14px";
+            error_email.style.padding = "14px";
+
+            //this function validates the email
+            if (!(document.enrollment.email.value.match(mailformat))) {
+                alert("Dear " + Fname + ", you have given me an invalid email address");
+                text = "Please provide your email address!";
+                error_email.innerHTML = text;
+                error_phone.style.padding = "0px";
+                return false;
+            } 
+            // reference: https://www.w3resource.com/javascript/form/email-validation.php
+
+            //this function validates the phone number
+            // uses 10 digits
+            // format: +XX-XXXX-XXXX
+            //         +XX.XXXX.XXXX
+            //         +XX XXXX XXXX
+            else if (!(document.enrollment.phone.value.match(phoneno))) {
+                alert("Riing-Riing, Riing-Riing, Riing-Riing-");
+                text = "Riing-Rinng, no answer! Please try again to give a valid phone number!";
+                error_phone.innerHTML = text;
+                error_email.innerHTML = "";
+                error_email.style.padding = "0px";
+                return false;
+            
+            } else {
+                text = "";
+                error_phone.innerHTML = text;
+                error_phone.style.padding = "0px";
+                error_email.innerHTML = text;
+                error_email.style.padding = "0px";
+                return true;
+            }
+            //reference: https://www.w3resource.com/javascript/form/phone-no-validation.php
+        } // checkEmailPhone()
+
+        function checkAddressBirthResident() {
+            var country = document.enrollment.country.value;
+            var city = document.enrollment.city.value;
+            var streetAddress = document.enrollment.streetAddress.value;
+            
+            var birthCountry = document.enrollment.birthCountry.value;
+            var residentCountry = document.enrollment.residentCountry.value;
+
+            var text;
+            error_address.style.padding = "14px";
+            
+            if (birthCountry == "") {
+                alert("Please provide your country of birth!");
+                text = "Please provide your country of birth!";
+                error_address.innerHTML = text;
+            } if (residentCountry == "") {
+                alert("Please provide your country of residence!");
+                text = "Please provide your country of residence!";
+                error_address.innerHTML = text;
+            } if (streetAddress == "") {
+                alert("Please provide your street address!");
+                text = "Type down your street address!";
+                error_address.innerHTML = text;
+                return false;
+            } if (city == "") {
+                alert("Please provide awesome city!");
+                text = "Type down your awesome city!";
+                error_address.innerHTML = text;
+                return false;
+            } if (country == "") {
+                alert("Please provide your country!");
+                text = "Please provide your country!";
+                error_address.innerHTML = text;
+                return false;
+            } else {
+                text = "";
+                error_address.innerHTML = text;
+                error_address.style.padding = "0px";
+                return true;
+            }
+        } // checkAddress()
+
+    </script>
+    
+</head>
+
+<body>
+
+<!-- === Background Image === -->
+<div class="background">
+
+<!-- === Navigation Bar === -->
+<header>
+<div class="container">
+<!--Logo-->
+<a href="index.html"><img src="media/logo.png" alt="Teach Logo" class="logo"></a>
+<nav>
+	<ul id="nav" class="paddingUL">
+		<li class="nav" ><a href="index.html">Home</a></li>
+		<li class="nav"><a href="technology.xml">Technology</a></li>
+		<li class="nav"><a href="engineering.xml">Engineering</a></li>
+		<li class="nav"><a href="mathematics.xml">Mathematics</a></li>
+		<li class="nav"><a href="form.html" class="active">Enrollment</a></li>
+		<li class="nav"><a href="contact.html">Contact</a></li>
+		<li class="nav"><a href="aboutUs.html">About Us</a></li>
+	</ul>
+	
+</nav>
+</div>
+</header>
+
+
+<!-- Data Collection Page -->
+
+<div class="form">
+    <!-- === Level 1 heading for form.html === -->
+    <h1 id="enrollTitle">Enrollment</h1>
+    
+    <!--Created a form for the enrollment of the students-->
+    <form name="enrollment" method="POST" action="http://evc-cit.info/cgi-bin/echoform.cgi" onsubmit="return validateForm();">
+    
+    <!--Salutation-->
+    <div class="enroll_input">
+        <h3>Pick what you would like to be addressed as <span style="color: red;">*</span></h3>
+        <div id="salutation">
+            <select name="salutation">
+                <option>Select</option>
+                <option>Master</option>
+                <option>Mrs.</option>
+                <option>Miss</option>
+                <option>Mrs.</option>
+                <option>Ms.</option>
+                <option>Mx.</option>
+            </select>
+        </div>
+    </div>
+
+    <!--Full Name-->
+    <div>
+        <h3>Your Name</h3>
+        <div class="enroll_input">
+            <input type="text" name="firstName" placeholder="First Name *" id="firstName">
+        </div>
+    
+        <div class="enroll_input">
+            <input type="text" name="middleName" placeholder="Middle Name" id="middleName">
+        </div>
+            
+        <div class="enroll_input">
+            <input type="text" name="lastName" placeholder="Last Name *" id="lastName">
+        </div>
+        
+        <div class="enroll_input">
+            <input type="text" name="localisedName" placeholder="Localised Name (Optional)" id="localisedName">
+        </div>
+    </div>
+
+    <!--Gender-->
+    <div class="enroll_input">
+        <h3>Gender <span style="color: red;">*</span></h3>
+        <div id="gender">
+            <select name="gender">
+                <option>Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Unspecified</option>
+            </select>
+        </div>
+    </div>
+
+    <!--Age range-->
+    <div>
+    <h3>Age range <span style="color: red;">*</span></h3>
+        <div id="ageRange">
+            <div class="enroll_input">
+                <input type="radio" name="ageRange" value="&lt;20" id="lessThan20">
+                <label for="lessThan20">Less than 20</label><br>
+            </div>
+
+            <div class="enroll_input">
+                <input type="radio" name="ageRange" value="20-30" id="20-30">
+                <label for="20-30">20-30</label><br>
+            </div>
+
+            
+            <div class="enroll_input">
+                <input type="radio" name="ageRange" value="31-40" id="31-40">
+                <label for="31-40">31-40</label><br>
+            </div>
+            
+            <div class="enroll_input">
+                <input type="radio" name="ageRange" value="41-50" id="41-50">
+                <label for="41-50">41-50</label><br>
+           </div>
+            
+            <div class="enroll_input">
+                <input type="radio" name="ageRange" value="51-60" id="51-60">
+                <label for="51-60">51-60</label><br>
+           </div>   
+            
+            <div class="enroll_input">
+                <input type="radio" name="ageRange" value="&gt;60" id="moreThan60">
+                <label for="moreThan60">More than 60</label><br>
+            </div>
+
+        </div>
+
+    <!--This is where an error message appears from checkAddressBirthResident()-->
+    <div id="error_address"></div>
+
+    <!--Country of Birth-->
+    </div>
+    <div class="enroll_input">
+        <input type="text" placeholder="Country of Birth *" name="birthCountry" id="birthCountry">
+    </div>
+
+    <!--Country of Residence-->
+    <div class="enroll_input">
+        <input type="text" placeholder="Country of Residence *" name="residentCountry" id="residentCountry">
+    </div>
+
+    <!--Street Address-->
+    <div>
+        <h3>Street Address</h3>
+        <div class="enroll_input">
+            <input type="number" placeholder="Street Number" min="1" max="1000" name="stNumber" id="stNumber">
+        </div>
+    
+        <div class="enroll_input">
+            <input type="number" placeholder="Unit"  min="1" max="1000" name="unit" id="unit">
+        </div>
+    
+        <div class="enroll_input">
+            <input type="text" placeholder="Building" name="building" id="building">
+        </div>
+        
+        <div class="enroll_input">
+            <input type="text" placeholder="Street Name" name="streetName" id="streetName">
+        </div>
+    
+        <div class="enroll_input">
+            <input type="text" placeholder="Street Address *" name="streetAddress" id="streetAddress">
+        </div>
+    
+        <div class="enroll_input">
+            <input type="text" placeholder="City *" name="city" id="city">
+        </div>
+    
+        <div class="enroll_input">
+            <input type="text" placeholder="State" name="state" id="state">
+        </div>
+    
+        <div class="enroll_input">
+            <input type="text" placeholder="Country *" name="country" id="country">
+        </div>
+    
+        <div class="enroll_input">
+            <input type="text" placeholder="Postcode" name="postcode" id="postcode">
+        </div>
+    </div>
+
+    <!--E-mail-->
+    <h3>E-mail <span style="color: red;">*</span></h3>
+    <!--Error message appears from checkEmailPhone()-->
+    <div id="error_email"></div>
+        <div class="enroll_input">
+            <input type="text" placeholder="E-mail" name="email" id="email">
+        </div>
+
+    <!--Phone Number-->
+    <h3>Phone Number <span style="color: red;">*</span></h3>
+    <!--Error message appears from checkEmailPhone()-->
+    <div id="error_phone"></div>
+    <p>Input a 10-digit valid phone number.</p>
+        <div class="enroll_input">
+            <input type="tel" placeholder="Phone number" name="phone" id="phone">
+        </div>
+    
+    <!--User's S[TEM] strand-->
+    <div>
+    <h3>Select which S[TEM] strand do you want to enroll to <span style="color: red;">*</span></h3>
+        <div id="STEMstrand">
+            <div class="enroll_input">
+                <input type="checkbox" name="STEMstrand" value="technology" id="technology">
+                <label for="technology">Technology</label>    
+            </div>
+
+            <div class="enroll_input">
+                <input type="checkbox" name="STEMstrand" value="engineering" id="engineering">
+                <label for="engineering">Engineering</label>
+            </div>
+            
+            <div class="enroll_input">
+                <input type="checkbox" name="STEMstrand" value="mathematics" id="mathematics">
+                <label for="mathematics">Mathematics</label>
+            </div>
+        </div>
+    </div>
+
+    <!--User's reason for choosing their desired course in that strand-->
+    <div>
+        <h3>Write down why do you want to learn your desired course from that STEM strand? <span style="color: red;">*</span></h3>
+        <div class="enroll_input">
+            <textarea placeholder="Type here..." name="course" id="course"></textarea>
+        </div>
+    </div>
+
+    <!--This is where a message appears when an error occurs for checkNamesGenderAgeSTEM()-->
+    <div id="error_message"></div>
+
+    <!--Buttons to submit or reset form-->
+    <div class="btnForm">
+    <input type="submit" value="Submit">
+    <input type="reset">
+    </div>
+
+    </form>
+</div>
+
+
+<!-- === Footer === -->
+<!-- Author's Copyright Statement -->
+<address>
+<ul id="rightFooter">
+	<li>&#169; 2020 by <a href="https://amandaviray.wixsite.com/amazellia">Amanda Patricia D. Viray</a></li>
+	<li>AmandaPatricia.Viray@uon.edu.au</li>
+	<li>Bachelor of Information Technology - Interactive Media</li>
+</ul>
+</address>
+
+<!-- SNS and Links -->
+<ul class="navBottom">
+	<li class="navBottom"><a href="https://www.newcastle.edu.au/"><img src="media/uon.png" alt="Universty of Newcastle, Australia" class="uon"></a></li>
+	<li class="navBottom"><a href="https://www.linkedin.com/school/university-of-newcastle/"><img src="media/linkedin.png" alt="LinkedIn" class="sns"></a></li>
+	<li class="navBottom"><a href="https://www.instagram.com/uni_newcastle/?hl=en"><img src="media/instagram.png" alt="Instagram" class="sns"></a></li>
+	<li class="navBottom"><a href="https://twitter.com/Uni_Newcastle"><img src="media/twitter.png" alt="Twitter" class="sns"></a></li>
+
+	<li class="navBottom"><a href="aboutUs.html" style="float: right"><strong>About Us</strong></a></li>
+	<li class="navBottom"><a href="contact.html" style="float: right"><strong>Contact</strong></a></li>
+	<li class="navBottom"><a href="https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/" style="float: right"><strong>Privacy Policy</strong></a></li>
+	<li class="navBottom"><a href="https://media.termsfeed.com/pdf/terms-and-conditions-template.pdf" style="float: right"><strong>Terms and Conditions</strong></a></li>
+</ul>
+</div> <!--End of div class 'background' -->
+
+<!--References
+Form Layout - https://codepen.io/RajRajeshDn/pen/QRjwpG
+-->
+
+</body>
+</html>

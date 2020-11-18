@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="InformationDisplay.xsl"?>
+
+<!-- 
+technology.xml
+Author: Amanda Patricia D. Viray
+Date: 3/13/2020 - 4/12/2020
+-->
+
+<!DOCTYPE teachSTEM [
+<!ELEMENT teachSTEM (course+)>
+	<!ELEMENT course (program, srtdescription, objectives, picture, duration+, cost+, lngdescription+, video, curriculum, URL)>
+	<!ATTLIST teachSTEM area (Science|Technology|Engineering|Mathematics) #REQUIRED>
+	
+	<!ELEMENT program 
+		(name,coursecode, units, level)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT coursecode (#PCDATA)>
+	<!ELEMENT units (#PCDATA)>
+		<!ATTLIST units type (10|20) #REQUIRED>
+	<!ELEMENT level (#PCDATA)>
+		<!ATTLIST level lvl (1000|2000|3000|4000|5000|6000) #REQUIRED>
+	
+	<!ELEMENT srtdescription 
+		(#PCDATA)>
+		
+	<!ELEMENT objectives 
+		(learn+)>
+	<!ELEMENT learn (#PCDATA)>
+	
+	<!ELEMENT picture 
+		(#PCDATA)>
+		<!ATTLIST picture source CDATA "0">
+	
+	<!ELEMENT duration 
+		(weeks, perWeek)>
+	<!ELEMENT weeks (#PCDATA)>
+		<!ATTLIST weeks number CDATA "0">
+	<!ELEMENT perWeek 
+		(lecture, lab)>
+		<!ATTLIST perWeek hours CDATA "0">
+	<!ELEMENT lecture (#PCDATA)>
+		<!ATTLIST lecture hours CDATA "0">
+	<!ELEMENT lab (#PCDATA)>
+		<!ATTLIST lab hours CDATA "0">
+	
+	<!ELEMENT cost
+		(semester,  wScolarship*)>
+	<!ELEMENT semester 
+		(#PCDATA)>
+		<!ATTLIST semester cost CDATA "0">
+		<!ATTLIST semester currency (AUD|USD) #REQUIRED>
+	<!ELEMENT wScolarship (#PCDATA)>
+		<!ATTLIST wScolarship cost CDATA "0">
+		<!ATTLIST wScolarship currency (AUD|USD) #REQUIRED>
+	
+	<!ELEMENT lngdescription 
+		(#PCDATA)>
+		
+	<!ELEMENT video
+		(url+)>
+	<!ELEMENT url (#PCDATA)>
+		
+	<!ELEMENT curriculum 
+		(topic+)>
+	<!ELEMENT topic (#PCDATA)>
+	
+	<!ELEMENT URL 
+		(#PCDATA)>
+		<!ATTLIST URL source CDATA "0">
+		
+	<!ENTITY FEBE "Faculty of Engineering and Built Environment">
+	
+	<!ENTITY SEEC "School of Electrical Engineering and Computing">
+]>
+
+<teachSTEM area="Technology">
+
+	<!--INFT3950 Games Design-->
+	<course>
+		<program>
+			<name>Games Design</name>
+			<coursecode>INFT3950</coursecode>
+			<units type="10"/>
+			<level lvl="3000"/>
+		</program>
+
+		<srtdescription>
+		This course is under the &FEBE;, &SEEC;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Demonstrate an informed knowledge of concepts fundamental to games design</learn>
+			<learn>Communicate using the terminology specific to games design</learn>
+			<learn>Describe emerging trends within the games industry</learn>
+			<learn>Demonstrate an awareness of the ethical dimensions relevant to games design</learn>
+			<learn>Demonstrate an informed knowledge of screen-based interactivity</learn>
+			<learn>Critically evaluate using the key concepts involved in games design</learn>
+			<learn>Describe the processes involved in the games production cycle</learn>
+			<learn>Produce industry standard documentation towards a games concept proposal</learn>
+			<learn> Produce a visual presentation towards a games concept proposal.</learn>
+		</objectives>
+		
+		<picture source="media/INFT3950.jpg"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="4">
+				<lecture hours="2"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			Introduces the techniques of designing games for the digital entertainment industry. Students will analyse key game design elements 
+			including game genres, concepts, virtual worlds, storytelling, character, user interface design, and core technologies with a focus 
+			on the conceptual component of games design. Students will assimilate and expand upon the key theories and practices associated with
+			games design via a series of written and practical projects.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=G8AT01tuyrk</url>
+			<url>https://www.youtube.com/watch?v=6vSucvjN9Tc</url>
+		</video>
+		
+		<curriculum>
+			<topic>Fundamentals of games</topic>
+			<topic>Historic context of the Computer Games industry</topic>
+			<topic>Game genres and themes</topic>
+			<topic>Narrative and character development</topic>
+			<topic>Generating computer imagery</topic>
+			<topic>Interactivity</topic>
+			<topic>Virtual worlds</topic>
+			<topic>Game concept documentation</topic>
+			<topic>Games production cycle</topic>
+			<topic>Physical simulations</topic>
+			<topic>Game engines</topic>
+		</curriculum>
+		
+		<URL source="https://www.newcastle.edu.au/course/INFT3950"/>
+	</course>
+
+	<!--INFT3960 Games Production-->
+	<course>
+		<program>
+			<name>Games Production</name>
+			<coursecode>INFT3960</coursecode>
+			<units type="10"/>
+			<level lvl="3000"/>
+		</program>
+
+		<srtdescription>
+		This course is under the &FEBE;, &SEEC;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>State the objectives and define the design requirements for a computer game</learn>
+			<learn>Implement a game based on design requirements</learn>
+			<learn>Compare and contrast the different technologies used in game development</learn>
+			<learn>Explain the impact of different development tools and key technologies that may be used in game development</learn>
+			<learn>Integrate and use existing development tools in the construction of an original computer game</learn>
+			<learn>Recognise and follow the keys phases of computer game development.</learn>
+		</objectives>
+		
+		<picture source="media/INFT3960.png"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="4">
+				<lecture hours="2"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			Building on prior programming knowledge, students will use available game engine technology to construct the operating elements 
+			of a game design. This course examines the techniques used in bringing a game to the point of distribution and transforming a design 
+			into a reality. Students will also come to experience and understand the relevance of other implementation issues such as physics 
+			engines, rendering tools, audio components, and the integration of the output from the art production tools used to create the game 
+			objects, world elements and backgrounds.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=SicZcaa-pRk</url>
+			<url>https://www.youtube.com/watch?v=WUkcz2taCiw</url>
+		</video>
+		
+		<curriculum>
+			<topic>Fundamentals of computer game production</topic>
+			<topic>2D and 3D graphics</topic>
+			<topic>Software development processes</topic>
+			<topic>Integration of computer imagery</topic>
+			<topic>3D model generation</topic>
+			<topic>Interface design</topic>
+			<topic>Production design</topic>
+			<topic>Game genres and themes</topic>
+			<topic>Computer games production cycle</topic>
+			<topic>Development tools for computer games</topic>
+			<topic>Game engines</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/INFT3960"/>
+	</course>
+
+	
+	<!--INFT1201 Digital Technologies for Media and Entertainment-->
+	<course>
+		<program>
+			<name>Digital Technologies for Media and Entertainment</name>
+			<coursecode>INFT1201</coursecode>
+			<units type="10"/>
+			<level lvl="1000"/>
+		</program>
+
+		<srtdescription>
+		This course is under the &FEBE;, &SEEC;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Describe and interpret the transformation of media delivery technologies (e.g. newspapers, film, television etc) that have been enabled by new digital and networking technologies.</learn>
+			<learn>Describe and apply the key technologies used in developing content for new media production, and understand their current limitations</learn>
+			<learn>Describe and apply the key technologies used in distributing multimedia content, and issues and limitations.</learn>
+			<learn>Critique and identify risks in the new media delivery models that appear from media organisations.</learn>
+		</objectives>
+		
+		<picture source="media/INFT1201.jpg"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="4">
+				<lecture hours="2"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			This course introduces fundamental concepts and technologies employed in exploiting the internet for infotainment via digital 
+			media for streaming or downloading images, video and audio using approaches such as IPTV and media streaming services. Concurrently,
+			students gain insight into production methodologies and the culture of the entertainment and media industries, which will assist 
+			them in supporting content creation teams.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=XnkFYKTDCvU</url>
+			<url>https://www.youtube.com/watch?v=CrL8lqJkvAE</url>
+		</video>
+		
+		<curriculum>
+			<topic>History and future of mass communication media, ownership, government regulation, exploiting trends.</topic>
+			<topic>Content development- journalism, film, games.</topic>
+			<topic>Production technologies - input/output devices and formats for video and audio; image manipulation; implementing interactivity; mobile delivery technologies.</topic>
+			<topic>Distribution technologies: Introduction to communications - bandwidth, compression, security; Infotainment servers - capacity, reliability, search engines and streaming video and audio.</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/INFT1201"/>
+	</course>
+
+</teachSTEM>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="InformationDisplay.xsl"?>
+
+<!-- 
+engineering.xml
+Author: Amanda Patricia D. Viray
+Date: 3/13/2020 - 4/12/2020
+-->
+
+<!DOCTYPE teachSTEM [
+<!ELEMENT teachSTEM (course+)>
+	<!ELEMENT course (program, srtdescription, objectives, picture, duration+, cost+, lngdescription+, video, curriculum, URL)>
+	<!ATTLIST teachSTEM area (Science|Technology|Engineering|Mathematics) #REQUIRED>
+	
+	<!ELEMENT program 
+		(name,coursecode, units, level)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT coursecode (#PCDATA)>
+	<!ELEMENT units (#PCDATA)>
+		<!ATTLIST units type (10|20) #REQUIRED>
+	<!ELEMENT level (#PCDATA)>
+		<!ATTLIST level lvl (1000|2000|3000|4000|5000|6000) #REQUIRED>
+	
+	<!ELEMENT srtdescription 
+		(#PCDATA)>
+		
+	<!ELEMENT objectives 
+		(learn+)>
+	<!ELEMENT learn (#PCDATA)>
+	
+	<!ELEMENT picture 
+		(#PCDATA)>
+		<!ATTLIST picture source CDATA "0">
+	
+	<!ELEMENT duration 
+		(weeks, perWeek)>
+	<!ELEMENT weeks (#PCDATA)>
+		<!ATTLIST weeks number CDATA "0">
+	<!ELEMENT perWeek 
+		(lecture, lab)>
+		<!ATTLIST perWeek hours CDATA "0">
+	<!ELEMENT lecture (#PCDATA)>
+		<!ATTLIST lecture hours CDATA "0">
+	<!ELEMENT lab (#PCDATA)>
+		<!ATTLIST lab hours CDATA "0">
+	
+	<!ELEMENT cost
+		(semester,  wScolarship*)>
+	<!ELEMENT semester 
+		(#PCDATA)>
+		<!ATTLIST semester cost CDATA "0">
+		<!ATTLIST semester currency (AUD|USD) #REQUIRED>
+	<!ELEMENT wScolarship (#PCDATA)>
+		<!ATTLIST wScolarship cost CDATA "0">
+		<!ATTLIST wScolarship currency (AUD|USD) #REQUIRED>
+	
+	<!ELEMENT lngdescription 
+		(#PCDATA)>
+		
+	<!ELEMENT video
+		(url+)>
+	<!ELEMENT url (#PCDATA)>
+		
+	<!ELEMENT curriculum 
+		(topic+)>
+	<!ELEMENT topic (#PCDATA)>
+	
+	<!ELEMENT URL 
+		(#PCDATA)>
+		<!ATTLIST URL source CDATA "0">
+		
+	<!ENTITY FEBE "Faculty of Engineering and Built Environment">
+	<!ENTITY SoE "School of Engineering">
+	<!ENTITY SEEC "School of Electrical Engineering and Computing">
+]>
+
+<teachSTEM area="Engineering">
+	<!--SENG2260 Human-Computer Interaction-->
+	<course>
+		<program>
+			<name>Human-Computer Interaction</name>
+			<coursecode>SENG2260</coursecode>
+			<units type="10"/>
+			<level lvl="2000"/>
+		</program>
+
+		<srtdescription>
+		This course is under the &FEBE;, &SEEC;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Define interaction design and human-computer interaction</learn>
+			<learn>Critically explain interaction and user experience issues</learn>
+			<learn> Be familiar with conceptual models for designers and users</learn>
+			<learn>Have knowledge of design and prototyping methods for user interfaces</learn>
+			<learn>Design a user interface that employs best practice principles</learn>
+			<learn>Understand techniques of data collection, analysis and interpretation</learn>
+			<learn>Position their knowledge and skills against current social and ethical concerns</learn>
+		</objectives>
+		
+		<picture source="media/SENG2260.jpg"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="4">
+				<lecture hours="2"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000 AUD" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			This course introduces human-computer interaction and, specifically, interaction design. The aim is to consider modern trends in the 
+			development of user interfaces from designing for usability to designing to enable user experiences. Design, testing and evaluation 
+			methods will be discussed and analysis of interfaces by experimentation on humans is described. The course includes a large practical 
+			project in which the students engineer a user interface.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=t_ZzhadA3DY</url>
+			<url>https://www.youtube.com/watch?v=m1zk4r6NWBc</url>
+		</video>
+				
+		<curriculum>
+			<topic>Foundations of HCI and Interaction Design</topic>
+			<topic>Understanding and conceptualising interaction</topic>
+			<topic>Designing for interaction</topic>
+			<topic>Affective aspects of interfaces</topic>
+			<topic>Accessibility and internationalisation </topic>
+			<topic>User-centred design and testing</topic>
+			<topic>Data gathering, analysis and interpretation</topic>
+			<topic> Empirical evaluation for HCI</topic>
+			<topic>Human factors and security issues</topic>
+			<topic>Social and ethical concerns</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/SENG2260"/>
+
+	</course>
+
+	<!--ENGG1003 Introduction to Procedural Programming-->
+	<course>
+		<program>
+			<name>Introduction to Procedural Programming</name>
+			<coursecode>ENGG1003</coursecode>
+			<units type="10"/>
+			<level lvl="1000"/>
+		</program>
+
+		<srtdescription>
+		This course is under the &FEBE;, &SoE;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Describe a programmer’s perspective of how computers work, by defining the function of the conceptual components that are fundamental to all computers.</learn>
+			<learn>Translate a simple problem into an algorithm suitable for solving on a computer.</learn>
+			<learn>Describe the purpose and syntax of the basic elements of the C programming language including various data types, variables, arrays, operators, program flow control (e.g., conditional flow, loops), functions and pointers.</learn>
+			<learn>Write, run and debug simple programs which are the implementation of computer solvable algorithms in the C programming language.</learn>
+			<learn>Describe the advantages and disadvantages of the C and MATLAB® programming languages.</learn>
+			<learn>Describe the purpose and syntax of the basic elements of the MATLAB® programming language including data types, variables, arrays, operators, program flow control (conditional flow, loops) and functions.</learn>
+			<learn>Write, debug and run simple programs which are the implementation of computer solvable algorithms in the MATLAB® programming language.</learn>
+		</objectives>
+		
+		<picture source="media/ENGG1003.jpg"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="6">
+				<lecture hours="3"/>
+				<lab hours="3"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000 AUD" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			This course introduces students to procedural programming and problem-solving with computers through MATLAB® and C, and assumes 
+			that students have basic computer literacy but no prior exposure to computer programming.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=eEBOvqMfPoI</url>
+			<url>https://www.youtube.com/watch?v=aoE-92Ac4zE</url>
+		</video>
+				
+		<curriculum>
+			<topic>MATLAB®: Introduction to computing</topic>
+			<topic>MATLAB®: Functions</topic>
+			<topic>MATLAB®: Program flow control</topic>
+			<topic>MATLAB®: Elementary data structures</topic>
+			<topic>MATLAB®: Input/output</topic>
+			<topic>C: Variables, operators and expressions</topic>
+			<topic>C: Functions</topic>
+			<topic>C: Program flow control</topic>
+			<topic>C: Pointers</topic>
+			<topic>C: Data Structures</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/ENGG1003"/>
+	</course>
+
+	<!--SENG4430 Software Quality-->
+	<course>
+		<program>
+			<name>Software Quality</name>
+			<coursecode>SENG4430</coursecode>
+			<units type="10"/>
+			<level lvl="4000"/>
+		</program>
+
+		<srtdescription>
+		This course is under the &FEBE;, &SEEC;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Understand general strategies used for software quality improvement</learn>
+			<learn>Understand factors which might impacts the overall quality of large software system</learn>
+			<learn>Understand and have experience of managing quality throughout a software project.</learn>
+		</objectives>
+		
+		<picture source="media/SENG4430.jpg"/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="4">
+				<lecture hours="2"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000 AUD" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			This course examines principles and techniques for designing quality into software, and for measuring and monitoring quality in 
+			software. Students will also obtain practical experience with software quality management and use of quality management tools.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=tDgXaM-P8ck</url>
+			<url>https://www.youtube.com/watch?v=T3q6QcCQZQg</url>
+		</video>
+				
+		<curriculum>
+			<topic>Software Quality Fundamentals  a. Software Engineering Culture and Ethics b. Value and Costs of Quality c. Models and Quality Characteristics d. Software Quality Improvement e. Software Safety</topic>
+			<topic>Software Quality Management Processes a. Software Quality Assurance b. Verification and Validation c. Reviews and Audits</topic>
+			<topic>Practical Considerations a. Software Quality Requirements b. Defect Characterization c. Software Quality Management Techniques d. Software Quality Measurement</topic>
+			<topic>Software Quality Tools</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/SENG4430"/>
+
+	</course>
+</teachSTEM>

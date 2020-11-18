@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="InformationDisplay.xsl"?>
+
+<!-- 
+template.xml
+Author: Amanda Patricia D. Viray
+Date: 3/13/2020 - 4/12/2020
+-->
+
+<!DOCTYPE teachSTEM [
+<!ELEMENT teachSTEM (course+)>
+	<!ELEMENT course (program, srtdescription, objectives, picture, duration+, cost+, lngdescription+, video, curriculum, URL)>
+	<!ATTLIST teachSTEM area (Science|Technology|Engineering|Mathematics) #REQUIRED>
+	
+	<!ELEMENT program 
+		(name,coursecode, units, level)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT coursecode (#PCDATA)>
+	<!ELEMENT units (#PCDATA)>
+		<!ATTLIST units type (10|20) #REQUIRED>
+	<!ELEMENT level (#PCDATA)>
+		<!ATTLIST level lvl (1000|2000|3000|4000|5000|6000) #REQUIRED>
+	
+	<!ELEMENT srtdescription 
+		(#PCDATA)>
+		
+	<!ELEMENT objectives 
+		(learn+)>
+	<!ELEMENT learn (#PCDATA)>
+	
+	<!ELEMENT picture 
+		(#PCDATA)>
+		<!ATTLIST picture source CDATA "0">
+	
+	<!ELEMENT duration 
+		(weeks, perWeek)>
+	<!ELEMENT weeks (#PCDATA)>
+		<!ATTLIST weeks number CDATA "0">
+	<!ELEMENT perWeek 
+		(lecture, lab)>
+		<!ATTLIST perWeek hours CDATA "0">
+	<!ELEMENT lecture (#PCDATA)>
+		<!ATTLIST lecture hours CDATA "0">
+	<!ELEMENT lab (#PCDATA)>
+		<!ATTLIST lab hours CDATA "0">
+	
+	<!ELEMENT cost
+		(semester,  wScolarship*)>
+	<!ELEMENT semester 
+		(#PCDATA)>
+		<!ATTLIST semester cost CDATA "0">
+		<!ATTLIST semester currency (AUD|USD) #REQUIRED>
+	<!ELEMENT wScolarship (#PCDATA)>
+		<!ATTLIST wScolarship cost CDATA "0">
+		<!ATTLIST wScolarship currency (AUD|USD) #REQUIRED>
+	
+	<!ELEMENT lngdescription 
+		(#PCDATA)>
+		
+	<!ELEMENT video
+		(url+)>
+	<!ELEMENT url (#PCDATA)>
+		
+	<!ELEMENT curriculum 
+		(topic+)>
+	<!ELEMENT topic (#PCDATA)>
+	
+	<!ELEMENT URL 
+		(#PCDATA)>
+		<!ATTLIST URL source CDATA "0">
+
+	<!ENTITY FEBE "Faculty of Engineering and Built Environment">
+	
+	<!ENTITY SE "School of Engineering">
+]>
+
+<!--Dummy Data-->
+<!--You may change whatever data here for testing-->
+<teachSTEM area="Science">
+	<course>
+		<program deliveryMode="online">
+			<name>Materials Science and Engineering 1</name>
+			<coursecode>MECH2250</coursecode>
+			<units type="10"/>
+			<level lvl="2000"/>
+		</program>
+
+		<srtdescription>
+		This course is under the &FEBE;, &SE;.
+		</srtdescription>
+		
+		<objectives>
+			<learn>Select materials for engineering devices</learn>
+			<learn>Demonstrate the possibilities and limitations of materials in engineering situations</learn>
+			<learn> Describe emerging trends within the games industry</learn>
+			<learn>Demonstrate an awareness of the ethical dimensions relevant to games design</learn>
+		</objectives>
+		
+		<picture source=""/>
+		
+		<duration>
+			<weeks number="13"/>
+			<perWeek hours="4">
+				<lecture hours="2"/>
+				<lab hours="2"/>
+			</perWeek>
+		</duration>
+		
+		<cost>
+			<semester cost="4000" currency="AUD"/>
+			<wScolarship cost="less than 3000" currency="AUD"/>
+		</cost>
+			
+		<lngdescription>
+			Introduces the techniques of designing games for the digital entertainment industry. Students will analyse key game design elements including game genres, concepts, virtual worlds, storytelling, character, user interface design, and core technologies with a focus on the conceptual component of games design. Students will assimilate and expand upon the key theories and practices associated with games design via a series of written and practical projects.
+		</lngdescription>
+		
+		<video>
+			<url>https://www.youtube.com/watch?v=G8AT01tuyrk</url>
+			<url>https://www.youtube.com/watch?v=6vSucvjN9Tc</url>
+		</video>
+		
+		<curriculum>
+			<topic>Fundamentals of games</topic>
+			<topic>Historic context of the Computer Games industry</topic>
+			<topic>Game genres and themes</topic>
+			<topic>Narrative and character development</topic>
+			<topic>Generating computer imagery</topic>
+			<topic>Interactivity</topic>
+			<topic>Virtual worlds</topic>
+			<topic>Game concept documentation</topic>
+			<topic>Games production cycle</topic>
+			<topic>Physical simulations</topic>
+			<topic>Game engines</topic>
+		</curriculum>
+
+		<URL source="https://www.newcastle.edu.au/course/INFT3950"/>
+	</course>
+</teachSTEM>
