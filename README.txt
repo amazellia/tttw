@@ -1,7 +1,7 @@
 "Teach-To-The-World" Website
 Created by: Amanda Patricia D. Viray
 Student ID: UoN c3343654 | NIC 1029936
-Trimester 1 2020 | SENG1050 - Web Technologies
+Trimester 1 2020 
 
 ============================ʕ•́ᴥ•̀ʔっ============================
 Version 2.0
